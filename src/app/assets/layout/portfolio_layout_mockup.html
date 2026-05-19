@@ -1,0 +1,289 @@
+
+<h2 class="sr-only">Portfolio layout mockup showing homepage, projects page, and about page</h2>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Mono:wght@400;500&display=swap');
+  .pf-root { font-family: var(--font-sans); background: var(--color-background-secondary); padding: 24px; display: flex; flex-direction: column; gap: 32px; }
+  .page-label { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+  .frame { background: #f5f0e8; border-radius: 8px; overflow: hidden; border: 0.5px solid var(--color-border-secondary); }
+  .serif { font-family: 'Playfair Display', Georgia, serif; }
+  .mono { font-family: 'DM Mono', monospace; }
+  .ink { color: #0a0a0a; }
+  .muted { color: #8a8070; }
+  .accent { color: #c8441e; }
+  .bg-ink { background: #0a0a0a; }
+  .bg-accent { background: #c8441e; }
+  .paper { background: #f5f0e8; }
+  .border-faint { border-color: #e8e2d6; }
+</style>
+
+<div class="pf-root">
+
+  <!-- PAGE 1: HOMEPAGE -->
+  <div>
+    <p class="page-label">Homepage</p>
+    <div class="frame">
+
+      <!-- Navbar -->
+      <div style="background:#f5f0e8; border-bottom:0.5px solid #e8e2d6; height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 20px;">
+        <span class="serif ink" style="font-size:16px; font-weight:900;">AC<span style="color:#c8441e;">.</span></span>
+        <div style="display:flex; gap:20px; align-items:center;">
+          <span class="mono muted" style="font-size:10px;">Work</span>
+          <span class="mono muted" style="font-size:10px;">About</span>
+          <span class="mono muted" style="font-size:10px;">Services</span>
+          <div style="background:#0a0a0a; padding:5px 12px;">
+            <span class="mono" style="font-size:10px; color:#f5f0e8;">Hire me</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero body -->
+      <div style="padding:28px 20px 0; background:#f5f0e8;">
+
+        <!-- Top bar -->
+        <div style="display:flex; justify-content:space-between; margin-bottom:20px;">
+          <span class="mono muted" style="font-size:9px; letter-spacing:0.15em; text-transform:uppercase;">Available for work — 2025</span>
+          <span class="mono muted" style="font-size:9px; letter-spacing:0.15em; text-transform:uppercase;">Based in San Francisco</span>
+        </div>
+
+        <!-- Headline -->
+        <div style="border-left:2px solid #c8441e; padding-left:12px; margin-bottom:4px;">
+          <p class="mono muted" style="font-size:9px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:6px;">Designer & Developer</p>
+          <div class="serif ink" style="font-size:54px; font-weight:900; line-height:0.88; letter-spacing:-0.02em;">
+            Crafting<br>
+            <span style="font-style:italic; color:#c8441e;">digital</span><br>
+            experiences.
+          </div>
+        </div>
+
+        <!-- Divider line -->
+        <div style="height:1px; background:#0a0a0a; margin:16px 0;"></div>
+
+        <!-- Bottom of hero -->
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; padding-bottom:20px;">
+          <p style="font-size:11px; color:#8a8070; max-width:180px; line-height:1.5;">I'm <strong style="color:#0a0a0a; font-weight:500;">Alex Chen</strong>, a multidisciplinary designer & developer building thoughtful interfaces for ambitious products.</p>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <div style="background:#0a0a0a; padding:8px 14px; display:flex; gap:6px; align-items:center;">
+              <span class="mono" style="font-size:10px; color:#f5f0e8;">View Work →</span>
+            </div>
+            <span class="mono muted" style="font-size:10px; border-bottom:0.5px solid #8a8070; padding-bottom:1px;">About me</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats bar -->
+      <div style="background:#f5f0e8; border-top:0.5px solid #e8e2d6; display:grid; grid-template-columns:1fr 1fr 1fr;">
+        <div style="padding:12px 20px; border-right:0.5px solid #e8e2d6;">
+          <p class="serif ink" style="font-size:22px; font-weight:700;">6+</p>
+          <p class="mono muted" style="font-size:9px; margin-top:2px;">Years experience</p>
+        </div>
+        <div style="padding:12px 20px; border-right:0.5px solid #e8e2d6;">
+          <p class="serif ink" style="font-size:22px; font-weight:700;">40+</p>
+          <p class="mono muted" style="font-size:9px; margin-top:2px;">Projects shipped</p>
+        </div>
+        <div style="padding:12px 20px;">
+          <p class="serif ink" style="font-size:22px; font-weight:700;">30+</p>
+          <p class="mono muted" style="font-size:9px; margin-top:2px;">Happy clients</p>
+        </div>
+      </div>
+
+      <!-- Marquee -->
+      <div style="background:#0a0a0a; padding:8px 0; overflow:hidden; white-space:nowrap;">
+        <span class="mono" style="font-size:10px; color:rgba(245,240,232,0.7); letter-spacing:0.05em;">
+          UI Design &nbsp;✦&nbsp; React & Next.js &nbsp;✦&nbsp; Motion Design &nbsp;✦&nbsp; Brand Identity &nbsp;✦&nbsp; Figma &nbsp;✦&nbsp; TypeScript &nbsp;✦&nbsp; UI Design &nbsp;✦&nbsp; React & Next.js &nbsp;✦&nbsp; Motion Design &nbsp;✦&nbsp; Brand Identity
+        </span>
+      </div>
+
+      <!-- Featured Work -->
+      <div style="background:#f5f0e8; padding:20px 20px 0;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:0.5px solid #e8e2d6; padding-bottom:10px; margin-bottom:0;">
+          <div>
+            <p class="mono muted" style="font-size:9px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:4px;">Selected Work</p>
+            <p class="serif ink" style="font-size:22px; font-weight:700;">Featured Projects</p>
+          </div>
+          <span class="mono muted" style="font-size:10px;">All projects →</span>
+        </div>
+
+        <!-- Project rows -->
+        {[
+          ['01', '#1a1a2e', 'Meridian', 'Brand Identity & Web', '2024'],
+          ['02', '#0d2137', 'Folio CMS', 'Product Design', '2024'],
+          ['03', '#1a2e1a', 'Terra', 'Mobile App', '2023'],
+        ].map(([num, col, title, cat, yr]) => `
+          <div style="display:flex; align-items:center; gap:14px; border-bottom:0.5px solid #e8e2d6; padding:12px 0;">
+            <span class="mono" style="font-size:9px; color:#8a8070; width:20px;">${num}</span>
+            <div style="width:40px; height:26px; border-radius:3px; background:${col}; flex-shrink:0;"></div>
+            <div style="flex:1;">
+              <span class="serif ink" style="font-size:16px; font-weight:700;">${title}</span>
+              <span class="mono" style="font-size:9px; color:#8a8070; margin-left:8px; border:0.5px solid #e8e2d6; padding:2px 6px; border-radius:20px;">${cat}</span>
+            </div>
+            <span class="mono muted" style="font-size:9px;">${yr}</span>
+            <div style="width:20px; height:20px; border-radius:50%; border:0.5px solid #8a8070; display:flex; align-items:center; justify-content:center;">
+              <span style="font-size:9px; color:#0a0a0a;">↗</span>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+
+      <!-- Services (dark) -->
+      <div style="background:#0a0a0a; padding:20px;">
+        <p class="mono" style="font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(245,240,232,0.35); margin-bottom:6px;">What I do</p>
+        <p class="serif" style="font-size:22px; font-weight:700; color:#f5f0e8; margin-bottom:16px;">Services</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; border:0.5px solid rgba(245,240,232,0.1);">
+          ${[
+            ['01','UI/UX Design','Figma · Prototyping · Systems'],
+            ['02','Frontend Dev','React · Next.js · TypeScript'],
+            ['03','Brand Identity','Logo · Color · Typography'],
+            ['04','Creative Direction','Art Dir. · Campaigns · Copy'],
+          ].map(([n,t,s], i) => `
+            <div style="padding:14px 16px; border-right:${i%2===0?'0.5px solid rgba(245,240,232,0.1)':'none'}; border-bottom:${i<2?'0.5px solid rgba(245,240,232,0.1)':'none'};">
+              <span class="mono" style="font-size:9px; color:rgba(245,240,232,0.25);">${n}</span>
+              <p class="serif" style="font-size:14px; font-weight:700; color:#f5f0e8; margin:6px 0 4px;">${t}</p>
+              <p class="mono" style="font-size:9px; color:rgba(245,240,232,0.4);">${s}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div style="background:#c8441e; padding:24px 20px;">
+        <p class="mono" style="font-size:9px; letter-spacing:0.2em; color:rgba(245,240,232,0.6); text-transform:uppercase; margin-bottom:6px;">Let's work together</p>
+        <p class="serif" style="font-size:30px; font-weight:900; color:#f5f0e8; line-height:0.9; margin-bottom:12px;">Got a project in mind?</p>
+        <p style="font-size:11px; color:rgba(245,240,232,0.7); margin-bottom:16px; max-width:280px; line-height:1.5;">Currently taking on new projects for Q1 2025.</p>
+        <div style="display:flex; gap:10px;">
+          <div style="background:#f5f0e8; padding:8px 14px;">
+            <span class="mono ink" style="font-size:10px; font-weight:500;">hello@alexchen.design →</span>
+          </div>
+          <div style="border:0.5px solid rgba(245,240,232,0.4); padding:8px 14px;">
+            <span class="mono" style="font-size:10px; color:#f5f0e8;">Learn more about me</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PAGE 2: PROJECTS -->
+  <div>
+    <p class="page-label">Projects page</p>
+    <div class="frame">
+
+      <!-- Navbar -->
+      <div style="background:#f5f0e8; border-bottom:0.5px solid #e8e2d6; height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 20px;">
+        <span class="serif ink" style="font-size:16px; font-weight:900;">AC<span style="color:#c8441e;">.</span></span>
+        <div style="display:flex; gap:20px; align-items:center;">
+          <span class="mono" style="font-size:10px; color:#0a0a0a; border-bottom:1px solid #c8441e;">Work</span>
+          <span class="mono muted" style="font-size:10px;">About</span>
+          <span class="mono muted" style="font-size:10px;">Services</span>
+          <div style="background:#0a0a0a; padding:5px 12px;"><span class="mono" style="font-size:10px; color:#f5f0e8;">Hire me</span></div>
+        </div>
+      </div>
+
+      <div style="background:#f5f0e8; padding:24px 20px;">
+        <!-- Header -->
+        <p class="mono muted" style="font-size:9px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:4px;">All projects</p>
+        <p class="serif ink" style="font-size:48px; font-weight:900; line-height:0.9; margin-bottom:12px;">Work</p>
+        <div style="height:0.5px; background:#e8e2d6; margin-bottom:20px;"></div>
+
+        <!-- Project grid -->
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
+          ${[
+            ['Meridian','Brand Identity & Web','2024','#1a1a2e'],
+            ['Folio CMS','Product Design','2024','#0d2137'],
+            ['Terra','Mobile App','2023','#1a2e1a'],
+            ['Pulse','Data Visualization','2023','#2e1a1a'],
+            ['Volta','Mobile & Brand','2023','#1a1a2e'],
+            ['Arkiv','Web Application','2022','#0a0a0a'],
+          ].map(([title, cat, yr, col]) => `
+            <div style="border:0.5px solid #e8e2d6; overflow:hidden; background:#f5f0e8;">
+              <div style="height:70px; background:${col}; display:flex; align-items:flex-end; padding:8px;">
+                <span class="serif" style="font-size:28px; font-weight:700; color:rgba(255,255,255,0.18);">${title[0]}</span>
+              </div>
+              <div style="padding:10px;">
+                <div style="display:flex; justify-content:space-between; align-items:start;">
+                  <p class="serif ink" style="font-size:13px; font-weight:700;">${title}</p>
+                  <span class="mono muted" style="font-size:9px;">${yr}</span>
+                </div>
+                <p class="mono muted" style="font-size:9px; margin:2px 0 6px;">${cat}</p>
+                <div style="display:flex; gap:4px;">
+                  <span style="font-size:8px; font-family:monospace; border:0.5px solid #e8e2d6; color:#8a8070; padding:2px 5px;">Design</span>
+                  <span style="font-size:8px; font-family:monospace; border:0.5px solid #e8e2d6; color:#8a8070; padding:2px 5px;">Dev</span>
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 3: ABOUT -->
+  <div>
+    <p class="page-label">About page</p>
+    <div class="frame">
+
+      <!-- Navbar -->
+      <div style="background:#f5f0e8; border-bottom:0.5px solid #e8e2d6; height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 20px;">
+        <span class="serif ink" style="font-size:16px; font-weight:900;">AC<span style="color:#c8441e;">.</span></span>
+        <div style="display:flex; gap:20px; align-items:center;">
+          <span class="mono muted" style="font-size:10px;">Work</span>
+          <span class="mono" style="font-size:10px; color:#0a0a0a; border-bottom:1px solid #c8441e;">About</span>
+          <span class="mono muted" style="font-size:10px;">Services</span>
+          <div style="background:#0a0a0a; padding:5px 12px;"><span class="mono" style="font-size:10px; color:#f5f0e8;">Hire me</span></div>
+        </div>
+      </div>
+
+      <div style="background:#f5f0e8; padding:24px 20px;">
+        <!-- Hero split -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:end; border-bottom:0.5px solid #e8e2d6; padding-bottom:20px; margin-bottom:20px;">
+          <div>
+            <p class="mono muted" style="font-size:9px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:4px;">About me</p>
+            <p class="serif ink" style="font-size:48px; font-weight:900; line-height:0.9;">Alex<br>Chen<span style="color:#c8441e;">.</span></p>
+          </div>
+          <div>
+            <p style="font-size:11px; color:#8a8070; line-height:1.6; margin-bottom:8px;">I'm a multidisciplinary designer and developer based in San Francisco. I've spent the last 6 years bridging the gap between beautiful design and thoughtful engineering.</p>
+            <p style="font-size:11px; color:#8a8070; line-height:1.6;">When I'm not designing or coding, I'm exploring the city on my road bike or experimenting with film photography.</p>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <p class="mono muted" style="font-size:9px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:12px;">Experience</p>
+        ${[
+          ['2024','Senior Designer','Freelance'],
+          ['2022','Product Designer','Folio Inc.'],
+          ['2020','UI/UX Designer','Pixel Studio'],
+          ['2018','Design Graduate','RISD'],
+        ].map(([yr, role, co]) => `
+          <div style="display:grid; grid-template-columns:40px 1fr 1fr; gap:12px; border-bottom:0.5px solid #e8e2d6; padding:10px 0; align-items:center;">
+            <span class="mono muted" style="font-size:9px;">${yr}</span>
+            <div>
+              <p class="serif ink" style="font-size:13px; font-weight:700;">${role}</p>
+              <p class="mono muted" style="font-size:9px; margin-top:2px;">${co}</p>
+            </div>
+            <p style="font-size:10px; color:#8a8070; line-height:1.5;">Led key design and engineering initiatives.</p>
+          </div>
+        `).join('')}
+
+        <!-- Tools -->
+        <div style="margin-top:20px; padding-top:20px; border-top:0.5px solid #e8e2d6;">
+          <p class="mono muted" style="font-size:9px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:12px;">Toolkit</p>
+          <div style="display:flex; flex-wrap:wrap; gap:6px;">
+            ${['Figma','Next.js','React','TypeScript','Framer Motion','Tailwind CSS','Supabase','Vercel','Adobe CC','Notion'].map(t => `
+              <span style="font-size:9px; font-family:monospace; border:0.5px solid #e8e2d6; color:#8a8070; padding:4px 10px;">${t}</span>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div style="margin-top:24px; padding-top:20px; border-top:0.5px solid #e8e2d6;">
+          <p class="serif ink" style="font-size:22px; font-weight:700; margin-bottom:12px;">Interested in working together?</p>
+          <div style="display:flex; gap:8px;">
+            <div style="background:#0a0a0a; padding:8px 16px;"><span class="mono" style="font-size:10px; color:#f5f0e8;">Say hello</span></div>
+            <div style="border:0.5px solid #0a0a0a; padding:8px 16px;"><span class="mono ink" style="font-size:10px;">View work</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
