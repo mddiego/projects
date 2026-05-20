@@ -8,6 +8,47 @@ export const metadata = {
   teste: "teste metadata",
 };
 
+const _skills = [
+  // "Jira",
+  "RabbitMQ",
+  // "3D Secure 2.0",
+  "Git",
+  // "REST API",
+  // "Pix",
+  "Docker",
+  // "MVC Architecture",
+  // "Shopify",
+  "Vue.js",
+  // "OAuth",
+  // "Vtex",
+  "JavaScript",
+  // "CI/CD",
+  // "Sales Cloud (Salesforce)",
+  "Node.js",
+  "Postman",
+  // "Commerce Cloud (Salesforce)",
+  "NPM",
+  "Cloudflare",
+  "Bootstrap",
+  // "HubSpot",
+  "PHP",
+  // "Figma",
+  "MySQL",
+  "Cypress",
+  // "Open Finance",
+  // "E-Commerce",
+  "React",
+  // "Payment Systems",
+  "Next.js",
+  // "Microservices",
+  "Tailwind",
+].map((v, k) => ({
+  key: k,
+  name: v,
+}));
+
+console.log(JSON.stringify(_skills));
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="">
@@ -37,6 +78,29 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <main className="mx-3">{children}</main>
+
+        <footer>
+          <div className="relative flex overflow-x-hidden">
+            <div className="animate-marquee py-12 whitespace-nowrap">
+              {_skills.map((v) => {
+                return (
+                  <span key={v.key} className="mx-4 text-4xl">
+                    {v.name}
+                  </span>
+                );
+              })}
+            </div>
+            <div className="absolute top-0 animate-marquee2 py-12 whitespace-nowrap">
+              {_skills.map((v) => {
+                return (
+                  <span key={v.key} className="mx-4 text-4xl">
+                    {v.name}
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
