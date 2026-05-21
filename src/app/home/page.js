@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <>
-      <div className="grid grid-cols-12 ">
+      <div className="col-span-12">
         <div
           className=""
           style={{
@@ -43,7 +43,7 @@ export default function Page() {
       <br />
       <br />
       <div className="col-span-12">
-        <p>
+        <p className="text-justify">
           With nearly 15 years of experience in software development and
           technology leadership, I have built a strong background in designing
           scalable systems, developing payment solutions, and delivering
