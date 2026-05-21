@@ -1,6 +1,6 @@
-import "./globals.css";
+import "@/app/globals.css";
 
-import Link from "next/link";
+import Header from "@/app/components/header";
 
 export const metadata = {
   title: "Create Next App",
@@ -47,39 +47,15 @@ const _skills = [
   name: v,
 }));
 
-// console.log(JSON.stringify(_skills));
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="">
-      <body className="mx-auto">
-        <header className="grid grid-cols-12 mx-3 py-4">
-          <nav className="col-span-3 col-start-10 text-right gap-4">
-            {[
-              {
-                href: "/",
-                title: "Home",
-              },
-              {
-                href: "/resume",
-                title: "Resume",
-              },
-              {
-                href: "/cover-letter",
-                title: "Cover Letter",
-              },
-            ].map((v, k) => {
-              return (
-                <Link className="px-3 py-2" key={k} href={v.href}>
-                  {v.title}
-                </Link>
-              );
-            })}
-          </nav>
-        </header>
-        <main className="mx-3 my-3">{children}</main>
-
-        <footer className="">
+      <body className="flex flex-col h-screen">
+        <Header />
+        <main className="xl:w-7xl w-auto xl:mx-auto mx-3 flex-1 my-3">
+          {children}
+        </main>
+        <footer className="shrink-0">
           <div className="relative flex overflow-x-hidden">
             <div className="animate-marquee py-6 whitespace-nowrap">
               {_skills.map((v) => {
