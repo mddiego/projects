@@ -1,8 +1,31 @@
 @import "./assets/fonts/fonts.css";
 @import "tailwindcss";
 
+@theme {
+  --animate-marquee-time: 30s;
+  --animate-marquee: marquee var(--animate-marquee-time) linear infinite;
+  --animate-marquee2: marquee2 var(--animate-marquee-time) linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes marquee2 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}
+
 :root {
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-display: "Playfair Display", Georgia, serif;
   --background: #f5f0e8;
   --foreground: #8a8070;
   --bg-hover: #0a0a0a;
@@ -27,6 +50,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-display);
+}
+
+footer {
+  background-color: var(--bg-hover);
+  color: var(--background);
+  margin-top: 10rem;
 }
 
 nav a {
