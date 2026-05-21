@@ -47,7 +47,7 @@ const _skills = [
   name: v,
 }));
 
-console.log(JSON.stringify(_skills));
+// console.log(JSON.stringify(_skills));
 
 export default function RootLayout({ children }) {
   return (
@@ -57,12 +57,12 @@ export default function RootLayout({ children }) {
           <nav className="col-span-3 col-start-10 text-right gap-4">
             {[
               {
-                href: "/home",
+                href: "/",
                 title: "Home",
               },
               {
-                href: "/cv",
-                title: "CV",
+                href: "/resume",
+                title: "Resume",
               },
               {
                 href: "/cover-letter",
@@ -77,24 +77,24 @@ export default function RootLayout({ children }) {
             })}
           </nav>
         </header>
-        <main className="mx-3">{children}</main>
+        <main className="mx-3 my-3">{children}</main>
 
-        <footer>
+        <footer className="">
           <div className="relative flex overflow-x-hidden">
-            <div className="animate-marquee py-12 whitespace-nowrap">
+            <div className="animate-marquee py-6 whitespace-nowrap">
               {_skills.map((v) => {
                 return (
-                  <span key={v.key} className="mx-4 text-4xl">
-                    {v.name}
+                  <span key={v.key} className="mx-4 text-lg">
+                    {v.name} &nbsp;&nbsp;&nbsp;&bull;
                   </span>
                 );
               })}
             </div>
-            <div className="absolute top-0 animate-marquee2 py-12 whitespace-nowrap">
+            <div className="absolute top-0 animate-marquee2 py-6 whitespace-nowrap">
               {_skills.map((v) => {
                 return (
-                  <span key={v.key} className="mx-4 text-4xl">
-                    {v.name}
+                  <span key={v.key} className="mx-4 text-lg">
+                    {v.name} &nbsp;&nbsp;&nbsp;&bull;
                   </span>
                 );
               })}

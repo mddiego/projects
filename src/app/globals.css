@@ -52,6 +52,12 @@ body {
   font-family: var(--font-display);
 }
 
+footer {
+  background-color: var(--bg-hover);
+  color: var(--background);
+  margin-top: 10rem;
+}
+
 nav a {
   &:hover {
     background-color: var(--bg-hover);
