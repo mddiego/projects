@@ -12,26 +12,16 @@ const _menu = [
     href: "/resume",
     title: "Resume",
   },
-  {
-    href: "/cover-letter",
-    title: "Cover Letter",
-  },
 ].map((v, k) => ({
   key: k,
   value: v,
 }));
-
-// useEffect({
-
-// ,[]})
 
 export default function Page() {
   const _menuMobile = useRef(null);
 
   const [_showMenu, toggleMenu] = useReducer((_showMenu) => !_showMenu, false);
   useEffect(() => {
-    console.log(_showMenu ? "true" : "false", _menuMobile.current?.classList);
-
     if (_showMenu) {
       _menuMobile.current?.classList.remove("hidden");
       _menuMobile.current?.classList.add("block");
@@ -43,7 +33,8 @@ export default function Page() {
 
   return (
     <header className="xl:w-7xl w-auto xl:mx-auto mx-3 shrink-0">
-      <div className="xl:grid-cols-12 grid-cols-1 py-4">
+      <div className="grid xl:grid-cols-12 grid-cols-2 py-4">
+        <span className="">Diego Lopes</span>
         <nav className="xl:col-span-3 xl:col-start-10 text-right sm:block hidden">
           {_menu.map((v) => {
             return (

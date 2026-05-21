@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <>
+    <div className="home">
       <div className="col-span-12">
         <div
           className=""
@@ -93,8 +93,16 @@ export default function Page() {
           <br />
           Diego Lopes.
           <br />
+          <br />
+          <a
+            className="underline"
+            href="https://www.linkedin.com/in/diegolopes1990"
+            target="_blank"
+          >
+            https://www.linkedin.com/in/diegolopes1990
+          </a>
         </p>
       </div>
-    </>
+    </div>
   );
 }
