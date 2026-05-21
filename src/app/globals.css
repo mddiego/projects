@@ -24,6 +24,27 @@
   }
 }
 
+/* skeleton.css */
+.skeleton {
+  background: #8a8070;
+  border-radius: 4px;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+.skeleton.circle {
+  border-radius: 50%;
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 :root {
   --font-display: "Playfair Display", Georgia, serif;
   --background: #f5f0e8;
