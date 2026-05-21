@@ -55,7 +55,7 @@ body {
 footer {
   background-color: var(--bg-hover);
   color: var(--background);
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
 nav a {
