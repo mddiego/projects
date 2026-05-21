@@ -2,6 +2,7 @@
 
 // app/api/hello/route.js
 import { NextResponse } from "next/server";
+import { helper } from "@/app/assets/js/helper";
 
 // export async function GET(req) {
 //   return NextResponse.json({ message: 'Hello World' })
@@ -78,7 +79,8 @@ const _xpList = [
 ];
 
 export async function GET(req) {
-  console.log("log", req, "2", req.nextUrl, "3", req.nextUrl.searchParams.id);
+  helper.log({ content: "GET" });
+  //console.log("log", req, "2", req.nextUrl, "3", req.nextUrl.searchParams.id);
 
   // const search = req.nextUrl.searchParams.get("id");
   // const authHeader = req.headers.get("host");
@@ -95,7 +97,7 @@ export async function GET(req) {
 // }
 
 export async function POST(req, { params }) {
-  console.log("log", await req, await params);
+  //console.log("log", await req, await params);
 
   const body = await req.json();
   return NextResponse.json({ received: body }, { status: 201 });
