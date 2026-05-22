@@ -43,7 +43,7 @@ export default function Page() {
         <nav className="xl:col-span-3 xl:col-start-10 text-right sm:block hidden">
           {_menu.map((v) => {
             return (
-              <Link className="px-3 py-2" key={v.key} href={v.value.href}>
+              <Link className="" key={v.key} href={v.value.href}>
                 {v.value.title}
               </Link>
             );
@@ -51,7 +51,7 @@ export default function Page() {
         </nav>
         <div className="relative">
           <a
-            className='sm:hidden flex justify-end items-center text-["18px"] cursor-pointer'
+            className="sm:hidden flex justify-end items-center text-2xl cursor-pointer"
             onClick={toggleMenu}
           >
             &bull;&bull;&bull;
@@ -62,7 +62,12 @@ export default function Page() {
           >
             {_menu.map((v) => {
               return (
-                <Link className="px-3 py-2" key={v.key} href={v.value.href}>
+                <Link
+                  className="mobile"
+                  key={v.key}
+                  href={v.value.href}
+                  onClick={toggleMenu}
+                >
                   {v.value.title}
                 </Link>
               );

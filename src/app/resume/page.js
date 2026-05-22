@@ -3,31 +3,7 @@
 import { useEffect, useReducer, useState } from "react";
 import { helper } from "@/app/assets/js/helper";
 
-import Skeleton from "@/app/components/skeleton";
-
-function ListItemSkeleton() {
-  return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        gap: 10,
-        padding: "10px 0",
-        borderBottom: "1px solid #8a8070",
-      }}
-    >
-      {/* <Skeleton circle height={36} /> */}
-      <div
-        style={{ display: "flex", flexDirection: "column", gap: 6, flex: 1 }}
-      >
-        <Skeleton height={50} width="100%" />
-        <Skeleton height={10} width="50%" />
-        <Skeleton height={10} width="50%" />
-        <Skeleton height={10} width="50%" />
-      </div>
-    </div>
-  );
-}
+import { ListItemSkeleton } from "@/app/components/skeleton";
 
 export default function Page() {
   const [_resume, setResume] = useState([]);
@@ -52,7 +28,7 @@ export default function Page() {
       </div>
       <div className={_showList ? "block" : "hidden"}>
         <div className="grid grid-cols-1">
-          <h1 className="mb-4">
+          <h1 className="">
             <a
               className="underline"
               href="https://www.linkedin.com/in/diegolopes1990"
@@ -82,7 +58,7 @@ export default function Page() {
           </div>
           <div>
             <h2 className="">Key Skills</h2>
-            <span className="block">
+            <span className="block pt-4">
               . Solution Architecture (Technical & Strategic Vision)
             </span>
             <span className="block">. Software Engineering</span>
@@ -98,11 +74,11 @@ export default function Page() {
             <span className="block">. Stakeholder Management</span>
           </div>
         </div>
-        <div className="grid grid-cols-1">
+        <div className="experience grid grid-cols-1">
           <h2 className="">Professional Experience</h2>
           {_resume.map((v, k) => {
             return (
-              <div key={v.company + k}>
+              <div className="roles" key={v.company + k}>
                 <h3 key={k}>{v.company}</h3>
 
                 {v.roles.map((vv, kk) => {
@@ -111,7 +87,7 @@ export default function Page() {
                       <h4 key={kk}>{vv.role}</h4>
                       {vv.description.map((vvv, kkk) => {
                         return (
-                          <span className="block mb-3" key={kkk}>
+                          <span className="block mt-3" key={kkk}>
                             {vvv}
                           </span>
                         );
@@ -120,7 +96,7 @@ export default function Page() {
                   );
                 })}
 
-                <hr className="my-4" />
+                <hr className="" />
               </div>
             );
           })}
@@ -128,6 +104,7 @@ export default function Page() {
 
         <div className="grid grid-cols-1">
           <h2 className="">Skills</h2>
+          <span className="pt-4"></span>
           <div className="grid sm:grid-cols-3 grid-cols-2">
             {helper.getSkills().map((v) => {
               return (

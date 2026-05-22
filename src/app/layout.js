@@ -1,7 +1,7 @@
 import "@/app/globals.css";
 
-import { helper } from "@/app/assets/js/helper";
 import Header from "@/app/components/header";
+import Footer from "@/app/components/footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -15,28 +15,7 @@ export default function RootLayout({ children }) {
       <body className="flex flex-col h-screen antialiased">
         <Header />
         <main className="xl:w-7xl w-auto flex-1 my-10">{children}</main>
-        <footer className="shrink-0">
-          <div className="relative flex overflow-x-hidden">
-            <div className="animate-marquee py-6 whitespace-nowrap">
-              {helper.getSkillsFooter().map((v) => {
-                return (
-                  <span key={v.key} className="mx-4 text-lg">
-                    {v.name} &nbsp;&nbsp;&nbsp;&bull;
-                  </span>
-                );
-              })}
-            </div>
-            <div className="absolute top-0 animate-marquee2 py-6 whitespace-nowrap">
-              {helper.getSkillsFooter().map((v) => {
-                return (
-                  <span key={v.key} className="mx-4 text-lg">
-                    {v.name} &nbsp;&nbsp;&nbsp;&bull;
-                  </span>
-                );
-              })}
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
