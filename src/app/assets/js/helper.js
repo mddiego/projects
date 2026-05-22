@@ -40,7 +40,7 @@ function getSkills() {
     ". Sales Cloud (Salesforce)",
     ". Node.js",
     ". Postman",
-    ". Commerce Cloud (Salesforce)",
+    ". Commerce Cloud (SFCC)",
     ". NPM",
     ". Cloudflare",
     ". Bootstrap",
