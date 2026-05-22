@@ -24,10 +24,80 @@
   }
 }
 
+:root {
+  --font-display: "Playfair Display", Georgia, serif;
+  --color-cream: #f5f0e8;
+  --color-gray: #8a8070;
+  --bg-hover: #0a0a0a;
+}
+
+/*
+@theme inline {
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-gray);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-cream: #8a8070;
+    --color-gray: #f5f0e8;
+  }
+}
+ */
+body {
+  background: var(--color-cream);
+  color: var(--color-gray);
+  font-family: var(--font-display);
+}
+
+main,
+header {
+  @apply mx-4 xl:mx-auto;
+}
+
+footer {
+  background-color: var(--bg-hover);
+  color: var(--color-cream);
+  margin-top: 5rem;
+}
+
+nav a {
+  &:hover {
+    background-color: var(--bg-hover);
+    color: var(--color-cream);
+  }
+}
+
+.resume {
+  & h1 {
+    @apply font-bold;
+  }
+
+  & p {
+    @apply text-justify;
+  }
+
+  & h2 {
+    background-color: var(--color-gray);
+    color: var(--color-cream);
+    @apply flex justify-start items-center my-5 py-4 pl-3 font-bold;
+  }
+
+  & h3 {
+    @apply font-bold;
+  }
+
+  & h4 {
+    @apply mt-5 mb-3 underline font-semibold;
+  }
+}
+
 /* skeleton.css */
 .skeleton {
   background: #8a8070;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   animation: shimmer 1.6s ease-in-out infinite;
 }
 
@@ -42,46 +112,5 @@
   }
   50% {
     opacity: 1;
-  }
-}
-
-:root {
-  --font-display: "Playfair Display", Georgia, serif;
-  --background: #f5f0e8;
-  --foreground: #8a8070;
-  --bg-hover: #0a0a0a;
-}
-
-/*
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #8a8070;
-    --foreground: #f5f0e8;
-  }
-}
- */
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-display);
-}
-
-footer {
-  background-color: var(--bg-hover);
-  color: var(--background);
-  margin-top: 5rem;
-}
-
-nav a {
-  &:hover {
-    background-color: var(--bg-hover);
-    color: var(--background);
   }
 }
