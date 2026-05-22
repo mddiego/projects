@@ -12,11 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="">
-      <body className="flex flex-col h-screen">
+      <body className="flex flex-col h-screen antialiased">
         <Header />
-        <main className="xl:w-7xl w-auto xl:mx-auto mx-3 flex-1 my-3">
-          {children}
-        </main>
+        <main className="xl:w-7xl w-auto flex-1 my-10">{children}</main>
         <footer className="shrink-0">
           <div className="relative flex overflow-x-hidden">
             <div className="animate-marquee py-6 whitespace-nowrap">
