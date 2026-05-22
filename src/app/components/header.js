@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const _menu = [
   {
-    href: "/",
+    href: "/home",
     title: "Home",
   },
   {
@@ -32,9 +32,14 @@ export default function Page() {
   }, [_showMenu, _menuMobile]);
 
   return (
-    <header className="xl:w-7xl w-auto xl:mx-auto mx-3 shrink-0">
+    <header className="xl:w-7xl w-auto shrink-0">
       <div className="grid xl:grid-cols-12 grid-cols-2 py-4">
-        <span className="">Diego Lopes</span>
+        <Link
+          href="/"
+          className="xl:col-span-9 xl:col-start-1 text-2xl underline underline-offset-8 decoration-double decoration-2 font-light font-features-['smcp']"
+        >
+          Diego Lopes
+        </Link>
         <nav className="xl:col-span-3 xl:col-start-10 text-right sm:block hidden">
           {_menu.map((v) => {
             return (
@@ -46,7 +51,7 @@ export default function Page() {
         </nav>
         <div className="relative">
           <a
-            className='sm:hidden flex justify-end items-center text-["18px"]'
+            className='sm:hidden flex justify-end items-center text-["18px"] cursor-pointer'
             onClick={toggleMenu}
           >
             &bull;&bull;&bull;
