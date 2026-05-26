@@ -93,7 +93,11 @@ export async function GET(req) {
     const client = await clientPromise;
     const db = client.db(process.env.DB);
 
-    const users = await db.collection("experiences").find().toArray();
+    const users = await db
+      .collection("experiences")
+      .find()
+      .sort({ _id: 1 }) // DESC
+      .toArray();
     return NextResponse.json(users);
   } catch (e) {
     return NextResponse.json(
