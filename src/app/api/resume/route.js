@@ -4,6 +4,8 @@
 import { NextResponse } from "next/server";
 import { helper } from "@/app/assets/js/helper";
 
+import clientPromise from "@/app/assets/js/db";
+
 // export async function GET(req) {
 //   return NextResponse.json({ message: 'Hello World' })
 // }
@@ -85,7 +87,24 @@ export async function GET(req) {
   // const search = req.nextUrl.searchParams.get("id");
   // const authHeader = req.headers.get("host");
 
-  return NextResponse.json(_xpList);
+  //return NextResponse.json(_xpList);
+
+  try {
+    const client = await clientPromise;
+    const db = client.db(process.env.DB);
+
+    const users = await db
+      .collection("experiences")
+      .find()
+      .sort({ _id: 1 }) // DESC
+      .toArray();
+    return NextResponse.json(users);
+  } catch (e) {
+    return NextResponse.json(
+      { error: "Failed to fetch data", message: JSON.stringify(e) },
+      //{ status: 500 },
+    );
+  }
 }
 
 // app/api/users/[action]/route.js

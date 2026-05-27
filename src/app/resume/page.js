@@ -76,30 +76,32 @@ export default function Page() {
         </div>
         <div className="experience grid grid-cols-1">
           <h2 className="">Professional Experience</h2>
-          {_resume.map((v, k) => {
-            return (
-              <div className="roles" key={v.company + k}>
-                <h3 key={k}>{v.company}</h3>
+          {_resume.length > 0
+            ? _resume.map((v, k) => {
+                return (
+                  <div className="roles" key={v.company + k}>
+                    <h3 key={k}>{v.company}</h3>
 
-                {v.roles.map((vv, kk) => {
-                  return (
-                    <div key={vv.role + kk}>
-                      <h4 key={kk}>{vv.role}</h4>
-                      {vv.description.map((vvv, kkk) => {
-                        return (
-                          <span className="block mt-3" key={kkk}>
-                            {vvv}
-                          </span>
-                        );
-                      })}
-                    </div>
-                  );
-                })}
+                    {v.roles.map((vv, kk) => {
+                      return (
+                        <div key={vv.role + kk}>
+                          <h4 key={kk}>{vv.role}</h4>
+                          {vv.description.map((vvv, kkk) => {
+                            return (
+                              <span className="block mt-3" key={kkk}>
+                                {vvv}
+                              </span>
+                            );
+                          })}
+                        </div>
+                      );
+                    })}
 
-                <hr className="" />
-              </div>
-            );
-          })}
+                    <hr className="" />
+                  </div>
+                );
+              })
+            : ""}
         </div>
 
         <div className="grid grid-cols-1">
