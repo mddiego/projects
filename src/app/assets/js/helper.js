@@ -1,6 +1,6 @@
 // console.log(await process.env);
 
-const _env_url = (process?.env?.URL || "") != "" ? process.env.URL : "/api";
+const _env_url = process.env.NEXT_PUBLIC_URL || "/api";
 
 async function getData(params) {
   const res = await fetch(_env_url + params.url);
